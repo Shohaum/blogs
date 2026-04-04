@@ -812,6 +812,16 @@ Command 2 → "GET name"
 
 Client processes **one line at a time**, converts each to RESP, sends separately.
 
+** For multi-word value
+```
+SET name "shohaum sarkar"
+```
+Client parses:
+```
+["SET", "name", "shohaum sarkar"]
+```
+See for multi-word value we use double quotes (").
+
 **2. Programmatic client (Node.js, Python, etc.)**
 
 You don't send raw text like:
